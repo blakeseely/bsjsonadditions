@@ -1,0 +1,26 @@
+{"menu": {
+  "QuoteTest": "\"file\"",
+  "SlashTest": "\\slash\\"
+  "value": true,
+  "dict": {
+    "NumberTests": [
+      {"value": "BoolTest", "bool": false},
+      {"value": "NumberTest", "number": -1e10},
+      {"value": "", "number": 10e-1},
+      {"value" : "float", "floating point number" : 1.2342342234},
+      {"value" : "float", "floating point number" : 0.2342342234},
+      {"value" : "float", "floating point number" : -1.2342342234},
+      {"value" : "float", "floating point number" : -0.2342342234}
+    ]
+  }
+}}
+
+-- contains escaped quotes
+-- contains escaped slashes
+-- contains negative numbers
+-- contains exponent notated numbers
+-- contains zero-length string
+-- contains floating point numbers
+-- contains floating point numbers with no digits left of the decimal
+-- contains negative floating point numbers
+-- contains negative floating point numbers with no digits left of the decimal
