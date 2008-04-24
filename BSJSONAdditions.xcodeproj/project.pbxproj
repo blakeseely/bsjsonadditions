@@ -11,6 +11,7 @@
 		28278CF60991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 28278CF40991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m */; };
 		28278CF90991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 28278CF80991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m */; };
 		28278CFA0991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 28278CF80991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m */; };
+		2897131509DB069800FD8236 /* BSJSONScanner_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2897131309DB069800FD8236 /* BSJSONScanner_UnitTests.m */; };
 		289A90380992AB180026B656 /* json_test_valid_01.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90330992AB180026B656 /* json_test_valid_01.txt */; };
 		289A90390992AB180026B656 /* json_test_valid_03.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90340992AB180026B656 /* json_test_valid_03.txt */; };
 		289A903A0992AB180026B656 /* json_test_valid_02.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90350992AB180026B656 /* json_test_valid_02.txt */; };
@@ -27,26 +28,12 @@
 		289A90630992AF6B0026B656 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289A90610992AF6B0026B656 /* SenTestingKit.framework */; };
 		289A91820994005D0026B656 /* json_test_valid_06.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A91810994005D0026B656 /* json_test_valid_06.txt */; };
 		289A91830994005D0026B656 /* json_test_valid_06.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A91810994005D0026B656 /* json_test_valid_06.txt */; };
+		28A021670DC0F11000324B9B /* json_test_invalid_01.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28A021660DC0F11000324B9B /* json_test_invalid_01.txt */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXBuildStyle section */
-		4A9504CCFFE6A4B311CA0CBA /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		4A9504CDFFE6A4B311CA0CBA /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-			};
-			name = Release;
-		};
-/* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
 		28278CF00991DC5800BCE5A7 /* PBXContainerItemProxy */ = {
@@ -68,6 +55,8 @@
 		28278CF40991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BSJSONAdditions.m"; sourceTree = "<group>"; };
 		28278CF70991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScanner+BSJSONAdditions.h"; sourceTree = "<group>"; };
 		28278CF80991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScanner+BSJSONAdditions.m"; sourceTree = "<group>"; };
+		2897131309DB069800FD8236 /* BSJSONScanner_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = BSJSONScanner_UnitTests.m; path = "Unit Tests/BSJSONScanner_UnitTests.m"; sourceTree = "<group>"; };
+		2897131409DB069800FD8236 /* BSJSONScanner_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BSJSONScanner_UnitTests.h; path = "Unit Tests/BSJSONScanner_UnitTests.h"; sourceTree = "<group>"; };
 		289A90330992AB180026B656 /* json_test_valid_01.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = json_test_valid_01.txt; path = "Unit Tests/Test Files/json_test_valid_01.txt"; sourceTree = "<group>"; };
 		289A90340992AB180026B656 /* json_test_valid_03.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = json_test_valid_03.txt; path = "Unit Tests/Test Files/json_test_valid_03.txt"; sourceTree = "<group>"; };
 		289A90350992AB180026B656 /* json_test_valid_02.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = json_test_valid_02.txt; path = "Unit Tests/Test Files/json_test_valid_02.txt"; sourceTree = "<group>"; };
@@ -77,6 +66,7 @@
 		289A90460992AC4A0026B656 /* JSONValidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONValidTests.m; path = "Unit Tests/JSONValidTests.m"; sourceTree = "<group>"; };
 		289A90610992AF6B0026B656 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/SenTestingKit.framework; sourceTree = "<absolute>"; };
 		289A91810994005D0026B656 /* json_test_valid_06.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = json_test_valid_06.txt; path = "Unit Tests/Test Files/json_test_valid_06.txt"; sourceTree = "<group>"; };
+		28A021660DC0F11000324B9B /* json_test_invalid_01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json_test_invalid_01.txt; path = "Unit Tests/Test Files/json_test_invalid_01.txt"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -151,6 +141,8 @@
 			children = (
 				289A90450992AC4A0026B656 /* JSONValidTests.h */,
 				289A90460992AC4A0026B656 /* JSONValidTests.m */,
+				2897131309DB069800FD8236 /* BSJSONScanner_UnitTests.m */,
+				2897131409DB069800FD8236 /* BSJSONScanner_UnitTests.h */,
 				289A90300992AA1F0026B656 /* Test Files */,
 			);
 			name = "Unit Tests";
@@ -159,6 +151,7 @@
 		289A90300992AA1F0026B656 /* Test Files */ = {
 			isa = PBXGroup;
 			children = (
+				28A021660DC0F11000324B9B /* json_test_invalid_01.txt */,
 				289A90330992AB180026B656 /* json_test_valid_01.txt */,
 				289A90340992AB180026B656 /* json_test_valid_03.txt */,
 				289A90350992AB180026B656 /* json_test_valid_02.txt */,
@@ -225,52 +218,12 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "Unit Tests-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Cocoa,
-					"-framework",
-					SenTestingKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = "Unit Tests";
-				WRAPPER_EXTENSION = octest;
-				ZERO_LINK = NO;
-			};
 			dependencies = (
 				28278CF10991DC5800BCE5A7 /* PBXTargetDependency */,
 			);
 			name = "Unit Tests";
 			productName = "Unit Tests";
 			productReference = 28278CEA0991DC5000BCE5A7 /* Unit Tests.octest */;
-			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
-<plist version=\"1.0\">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.Unit Tests</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundlePackageType</key>
-	<string>BNDL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-</dict>
-</plist>
-";
 			productType = "com.apple.product-type.bundle";
 		};
 		8D1107260486CEB800E47090 /* BSJSONAdditions */ = {
@@ -283,8 +236,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-			};
 			dependencies = (
 			);
 			name = BSJSONAdditions;
@@ -299,15 +250,11 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BSJSONAdditions" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				4A9504CCFFE6A4B311CA0CBA /* Debug */,
-				4A9504CDFFE6A4B311CA0CBA /* Release */,
-			);
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* BSJSONAdditions */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* BSJSONAdditions */,
 				28278CE90991DC5000BCE5A7 /* Unit Tests */,
@@ -326,6 +273,7 @@
 				289A90400992AB180026B656 /* json_test_valid_05.txt in Resources */,
 				289A90410992AB180026B656 /* json_test_valid_04.txt in Resources */,
 				289A91830994005D0026B656 /* json_test_valid_06.txt in Resources */,
+				28A021670DC0F11000324B9B /* json_test_invalid_01.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +318,7 @@
 				28278CF50991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m in Sources */,
 				28278CFA0991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m in Sources */,
 				289A90480992AC4A0026B656 /* JSONValidTests.m in Sources */,
+				2897131509DB069800FD8236 /* BSJSONScanner_UnitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +371,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SYSTEM_DEVELOPER_DIR)/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -455,6 +405,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SYSTEM_DEVELOPER_DIR)/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -522,6 +473,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -534,6 +486,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

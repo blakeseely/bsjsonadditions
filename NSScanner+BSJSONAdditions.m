@@ -21,6 +21,10 @@
 //  appreciated, just to let me know that people are finding my 
 //  code useful. You can reach me at blakeseely@mac.com
 //
+//
+//  Version 1.2: Includes modifications by Bill Garrison: http://www.standardorbit.com , which included
+//    Unit Tests adapted from Jonathan Wight's CocoaJSON code: http://www.toxicsoftware.com 
+//    I have included those adapted unit tests in this package.
 
 #import "NSScanner+BSJSONAdditions.h"
 
@@ -45,6 +49,11 @@ NSString *jsonNullString = @"null";
 	
 	BOOL result = NO;
 	
+    /* START - April 21, 2006 - Updated to bypass irrelevant characters at the beginning of a JSON string */
+    NSString *ignoredString;
+    [self scanUpToString:jsonObjectStartString intoString:&ignoredString];
+    /* END - April 21, 2006 */
+
 	if (![self scanJSONObjectStartString]) {
 		// TODO: Error condition. For now, return false result, do nothing with the dictionary handle
 	} else {
@@ -142,10 +151,26 @@ NSString *jsonNullString = @"null";
 					[chars appendString:@"\t"];
 					[self setScanLocation:([self scanLocation] + 2)];
 					break;
-				case 'u': // unicode sequence - get string of chars, convert to int, convert to unichar, append
+				case 'u': // unicode sequence - get string of hex chars, convert to int, convert to unichar, append
 					[self setScanLocation:([self scanLocation] + 2)]; // advance past '\u'
 					NSString *digits = [[self string] substringWithRange:NSMakeRange([self scanLocation], 4)];
-					[chars appendFormat:characterFormat, [digits intValue]];
+					/* START Updated code modified from code fix submitted by Bill Garrison - March 28, 2006 - http://www.standardorbit.net */
+                    NSScanner *hexScanner = [NSScanner scannerWithString:digits];
+                    NSString *verifiedHexDigits;
+                    NSCharacterSet *hexDigitSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEF"];
+					if (NO == [hexScanner scanCharactersFromSet:hexDigitSet intoString:&verifiedHexDigits])
+                        return NO;
+                    if (4 != [verifiedHexDigits length])
+                        return NO;
+                        
+                    // Read in the hex value
+                    [hexScanner setScanLocation:0];
+                    unsigned unicodeHexValue;
+                    if (NO == [hexScanner scanHexInt:&unicodeHexValue]) {
+                        return NO;
+                    }
+                    [chars appendFormat:characterFormat, unicodeHexValue];
+                    /* END update - March 28, 2006 */
 					[self setScanLocation:([self scanLocation] + 4)];
 					break;
 				default:

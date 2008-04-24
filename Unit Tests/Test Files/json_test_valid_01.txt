@@ -1,4 +1,4 @@
-{
+junk text that the parser should skip {
 	"glossary": {
 		"title": "example glossary",
 		"GlossDiv": {
