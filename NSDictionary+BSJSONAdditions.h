@@ -23,6 +23,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+extern NSString *jsonIndentString;
+extern const int jsonDoNotIndent;
 
 @interface NSDictionary (BSJSONAdditions)
 
@@ -34,8 +36,10 @@
 
 @interface NSDictionary (PrivateBSJSONAdditions)
 
-- (NSString *)jsonStringForValue:(id)value;
-- (NSString *)jsonStringForArray:(NSArray *)array;
+- (NSString *)jsonStringValueWithIndentLevel:(int)level;
+- (NSString *)jsonStringForValue:(id)value withIndentLevel:(int)level;
+- (NSString *)jsonStringForArray:(NSArray *)array withIndentLevel:(int)level;
 - (NSString *)jsonStringForString:(NSString *)string;
+- (NSString *)jsonIndentStringForLevel:(int)level;
 
 @end

@@ -45,6 +45,7 @@
 	dict = [NSDictionary dictionaryWithJSONString:jsonString];
 	STAssertNotNil(dict, @"Could not create dictionary from json_test_valid_02 json");
 	// output check
+    NSLog([dict jsonStringValue]);
 	dict2 = [NSDictionary dictionaryWithJSONString:[dict jsonStringValue]];
 	STAssertTrue([dict isEqualToDictionary:dict2], @"New Dictionary from json output of first dictionary should be equal for test 02");
 	// structure checks (counts, keypaths are not nil, etc.)
