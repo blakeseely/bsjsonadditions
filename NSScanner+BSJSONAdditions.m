@@ -218,10 +218,15 @@ NSString *jsonNullString = @"null";
 	BOOL result = NO;
 	
 	[self scanJSONWhiteSpace];
+	
 	NSString *substring = [[self string] substringWithRange:NSMakeRange([self scanLocation], 1)];
-	unsigned int trueLocation = [[self string] rangeOfString:jsonTrueString options:0 range:NSMakeRange([self scanLocation], ([[self string] length] - [self scanLocation]))].location;
-	unsigned int falseLocation = [[self string] rangeOfString:jsonFalseString options:0 range:NSMakeRange([self scanLocation], ([[self string] length] - [self scanLocation]))].location;
-	unsigned int nullLocation = [[self string] rangeOfString:jsonNullString options:0 range:NSMakeRange([self scanLocation], ([[self string] length] - [self scanLocation]))].location;
+	
+	// Since we have already scanned white space, we know that we're at the start of some value, and each of the strings below is at most
+	// four characters, so just look ahead that many spaces. (In previous versions of the code, I was scanning ahead through the entire string, but this
+	// was incredibly expensive for long strings - adding massive amounts of time to scan way past the string we might care about)
+	unsigned int trueLocation = [[self string] rangeOfString:jsonTrueString options:0 range:NSMakeRange([self scanLocation], [jsonTrueString length])].location;
+	unsigned int falseLocation = [[self string] rangeOfString:jsonFalseString options:0 range:NSMakeRange([self scanLocation], [jsonFalseString length])].location;
+	unsigned int nullLocation = [[self string] rangeOfString:jsonNullString options:0 range:NSMakeRange([self scanLocation], [jsonNullString length])].location;
 	
 	if ([substring isEqualToString:jsonStringDelimiterString]) {
 		result = [self scanJSONString:value];
