@@ -18,6 +18,7 @@
 	theScanner = nil;
 }
 
+
 - (void)testSimpleArray
 {
 	NSArray *jsonArray = [NSArray arrayWithJSONString:@"[\"hello\", \"world\", \"hello\"]"];
