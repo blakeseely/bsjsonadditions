@@ -125,12 +125,10 @@ NSString *jsonNullString = @"null";
 					[chars appendString:@"\\"]; // debugger shows result as having two slashes, but final output is correct. Possible debugger error?
 					[self setScanLocation:([self scanLocation] + 2)];
 					break;
-				/* TODO: json.org docs mention this seq, so does yahoo, but not recognized here by xcode, note from crockford: not a required escape
 				case '\/':
 					[chars appendString:@"\/"];
 					[self setScanLocation:([self scanLocation] + 2)];
 					break;
-				*/
 				case 'b':
 					[chars appendString:@"\b"];
 					[self setScanLocation:([self scanLocation] + 2)];
@@ -224,9 +222,20 @@ NSString *jsonNullString = @"null";
 	// Since we have already scanned white space, we know that we're at the start of some value, and each of the strings below is at most
 	// four characters, so just look ahead that many spaces. (In previous versions of the code, I was scanning ahead through the entire string, but this
 	// was incredibly expensive for long strings - adding massive amounts of time to scan way past the string we might care about)
-	unsigned int trueLocation = [[self string] rangeOfString:jsonTrueString options:0 range:NSMakeRange([self scanLocation], [jsonTrueString length])].location;
-	unsigned int falseLocation = [[self string] rangeOfString:jsonFalseString options:0 range:NSMakeRange([self scanLocation], [jsonFalseString length])].location;
-	unsigned int nullLocation = [[self string] rangeOfString:jsonNullString options:0 range:NSMakeRange([self scanLocation], [jsonNullString length])].location;
+	unsigned int scanLength = [[self string] length] - [self scanLocation];
+	if (scanLength > [jsonTrueString length])
+		scanLength = [jsonTrueString length];
+	unsigned int trueLocation = [[self string] rangeOfString:jsonTrueString options:0 range:NSMakeRange([self scanLocation], scanLength)].location;
+	
+	scanLength = [[self string] length] - [self scanLocation];
+	if (scanLength > [jsonFalseString length])
+		scanLength = [jsonFalseString length];
+	unsigned int falseLocation = [[self string] rangeOfString:jsonFalseString options:0 range:NSMakeRange([self scanLocation], scanLength)].location;
+	
+	scanLength = [[self string] length] - [self scanLocation];
+	if (scanLength > [jsonNullString length])
+		scanLength = [jsonNullString length];
+	unsigned int nullLocation = [[self string] rangeOfString:jsonNullString options:0 range:NSMakeRange([self scanLocation], scanLength)].location;
 	
 	if ([substring isEqualToString:jsonStringDelimiterString]) {
 		result = [self scanJSONString:value];
