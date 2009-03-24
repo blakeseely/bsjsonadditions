@@ -55,11 +55,11 @@ inline BOOL ScanArray(NSString *inString, id *outResult)
 
 @implementation BSJSONScanner_UnitTests
 
-- (void) tearDown 
+- (void)tearDown 
 {
-	[theScanner release]; theScanner = nil;
+	[theScanner release];
+	theScanner = nil;
 }
-
 
 - (void)testTrue
 {

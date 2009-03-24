@@ -13,6 +13,9 @@
 		28278CFA0991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 28278CF80991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m */; };
 		2889EE950F7956BB00B514B9 /* NSArray+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EE940F7956BB00B514B9 /* NSArray+BSJSONAdditions.m */; };
 		2889EE960F7956BB00B514B9 /* NSArray+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EE940F7956BB00B514B9 /* NSArray+BSJSONAdditions.m */; };
+		2889EE9C0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EE9B0F7997E500B514B9 /* NSString+BSJSONAdditions.m */; };
+		2889EE9D0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EE9B0F7997E500B514B9 /* NSString+BSJSONAdditions.m */; };
+		2889EEB20F799BA600B514B9 /* NSArray_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EEB00F799BA600B514B9 /* NSArray_UnitTests.m */; };
 		2897131509DB069800FD8236 /* BSJSONScanner_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2897131309DB069800FD8236 /* BSJSONScanner_UnitTests.m */; };
 		289A90380992AB180026B656 /* json_test_valid_01.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90330992AB180026B656 /* json_test_valid_01.txt */; };
 		289A90390992AB180026B656 /* json_test_valid_03.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90340992AB180026B656 /* json_test_valid_03.txt */; };
@@ -59,6 +62,10 @@
 		28278CF80991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScanner+BSJSONAdditions.m"; sourceTree = "<group>"; };
 		2889EE930F7956BB00B514B9 /* NSArray+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BSJSONAdditions.h"; sourceTree = "<group>"; };
 		2889EE940F7956BB00B514B9 /* NSArray+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BSJSONAdditions.m"; sourceTree = "<group>"; };
+		2889EE9A0F7997E500B514B9 /* NSString+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BSJSONAdditions.h"; sourceTree = "<group>"; };
+		2889EE9B0F7997E500B514B9 /* NSString+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BSJSONAdditions.m"; sourceTree = "<group>"; };
+		2889EEAF0F799BA600B514B9 /* NSArray_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSArray_UnitTests.h; path = "Unit Tests/NSArray_UnitTests.h"; sourceTree = "<group>"; };
+		2889EEB00F799BA600B514B9 /* NSArray_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArray_UnitTests.m; path = "Unit Tests/NSArray_UnitTests.m"; sourceTree = "<group>"; };
 		2897131309DB069800FD8236 /* BSJSONScanner_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = BSJSONScanner_UnitTests.m; path = "Unit Tests/BSJSONScanner_UnitTests.m"; sourceTree = "<group>"; };
 		2897131409DB069800FD8236 /* BSJSONScanner_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BSJSONScanner_UnitTests.h; path = "Unit Tests/BSJSONScanner_UnitTests.h"; sourceTree = "<group>"; };
 		289A90330992AB180026B656 /* json_test_valid_01.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = json_test_valid_01.txt; path = "Unit Tests/Test Files/json_test_valid_01.txt"; sourceTree = "<group>"; };
@@ -110,6 +117,8 @@
 				28278CF40991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m */,
 				28278CF70991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.h */,
 				28278CF80991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m */,
+				2889EE9A0F7997E500B514B9 /* NSString+BSJSONAdditions.h */,
+				2889EE9B0F7997E500B514B9 /* NSString+BSJSONAdditions.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -145,10 +154,12 @@
 		289A902F0992AA150026B656 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				2897131409DB069800FD8236 /* BSJSONScanner_UnitTests.h */,
+				2897131309DB069800FD8236 /* BSJSONScanner_UnitTests.m */,
 				289A90450992AC4A0026B656 /* JSONValidTests.h */,
 				289A90460992AC4A0026B656 /* JSONValidTests.m */,
-				2897131309DB069800FD8236 /* BSJSONScanner_UnitTests.m */,
-				2897131409DB069800FD8236 /* BSJSONScanner_UnitTests.h */,
+				2889EEAF0F799BA600B514B9 /* NSArray_UnitTests.h */,
+				2889EEB00F799BA600B514B9 /* NSArray_UnitTests.m */,
 				289A90300992AA1F0026B656 /* Test Files */,
 			);
 			name = "Unit Tests";
@@ -326,6 +337,8 @@
 				289A90480992AC4A0026B656 /* JSONValidTests.m in Sources */,
 				2897131509DB069800FD8236 /* BSJSONScanner_UnitTests.m in Sources */,
 				2889EE950F7956BB00B514B9 /* NSArray+BSJSONAdditions.m in Sources */,
+				2889EE9D0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */,
+				2889EEB20F799BA600B514B9 /* NSArray_UnitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +351,7 @@
 				28278CF90991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m in Sources */,
 				289A90470992AC4A0026B656 /* JSONValidTests.m in Sources */,
 				2889EE960F7956BB00B514B9 /* NSArray+BSJSONAdditions.m in Sources */,
+				2889EE9C0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

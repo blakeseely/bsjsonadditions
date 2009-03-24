@@ -29,15 +29,10 @@
 
 + (NSArray *)arrayWithJSONString:(NSString *)jsonString;
 - (NSString *)jsonStringValue;
+- (NSString *)jsonStringValueWithIndentLevel:(int)level;
 
 @end
 
 @interface NSArray (PrivateBSJSONAdditions)
-
-- (NSString *)jsonStringValueWithIndentLevel:(int)level;
 - (NSString *)jsonStringForValue:(id)value withIndentLevel:(int)level;
-- (NSString *)jsonStringForArray:(NSArray *)array withIndentLevel:(int)level;
-- (NSString *)jsonStringForString:(NSString *)string;
-- (NSString *)jsonIndentStringForLevel:(int)level;
-
 @end

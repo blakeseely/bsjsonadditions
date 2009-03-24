@@ -10,7 +10,8 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 
-@interface BSJSONScanner_UnitTests : SenTestCase {
+@interface BSJSONScanner_UnitTests : SenTestCase
+{
 	NSScanner *theScanner;
 }
 
