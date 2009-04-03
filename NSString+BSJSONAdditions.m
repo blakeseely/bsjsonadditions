@@ -43,7 +43,7 @@
 			case '\\':
 				[jsonString appendString:@"\\n"];
 				break;
-			case '\/':
+			case '/':
 				[jsonString appendString:@"\\/"];
 				break;
 			case '\b':

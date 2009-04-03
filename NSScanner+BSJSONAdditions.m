@@ -125,8 +125,8 @@ NSString *jsonNullString = @"null";
 					[chars appendString:@"\\"]; // debugger shows result as having two slashes, but final output is correct. Possible debugger error?
 					[self setScanLocation:([self scanLocation] + 2)];
 					break;
-				case '\/':
-					[chars appendString:@"\/"];
+				case '/':
+					[chars appendString:@"/"];
 					[self setScanLocation:([self scanLocation] + 2)];
 					break;
 				case 'b':
