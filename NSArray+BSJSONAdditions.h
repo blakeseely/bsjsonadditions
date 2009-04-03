@@ -21,7 +21,7 @@
 //  appreciated, just to let me know that people are finding my 
 //  code useful. You can reach me at blakeseely@mac.com
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 #import "NSDictionary+BSJSONAdditions.h"
 
