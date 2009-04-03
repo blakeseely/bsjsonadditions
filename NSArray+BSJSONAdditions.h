@@ -32,7 +32,3 @@
 - (NSString *)jsonStringValueWithIndentLevel:(int)level;
 
 @end
-
-@interface NSArray (PrivateBSJSONAdditions)
-- (NSString *)jsonStringForValue:(id)value withIndentLevel:(int)level;
-@end

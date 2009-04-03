@@ -29,6 +29,10 @@
 NSString *jsonIndentString = @"\t"; // Modify this string to change how the output formats.
 const int jsonDoNotIndent = -1;
 
+@interface NSDictionary (PrivateBSJSONAdditions)
+- (NSString *)jsonStringForValue:(id)value withIndentLevel:(int)level;
+@end
+
 @implementation NSDictionary (BSJSONAdditions)
 
 + (NSDictionary *)dictionaryWithJSONString:(NSString *)jsonString

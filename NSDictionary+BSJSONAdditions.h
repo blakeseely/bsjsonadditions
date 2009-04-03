@@ -32,8 +32,3 @@ extern const int jsonDoNotIndent;
 - (NSString *)jsonStringValue;
 - (NSString *)jsonStringValueWithIndentLevel:(int)level;
 @end
-
-
-@interface NSDictionary (PrivateBSJSONAdditions)
-- (NSString *)jsonStringForValue:(id)value withIndentLevel:(int)level;
-@end

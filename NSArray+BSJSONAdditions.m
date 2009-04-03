@@ -10,6 +10,10 @@
 #import "NSScanner+BSJSONAdditions.h"
 #import "NSString+BSJSONAdditions.h"
 
+@interface NSArray (PrivateBSJSONAdditions)
+- (NSString *)jsonStringForValue:(id)value withIndentLevel:(int)level;
+@end
+
 @implementation NSArray (BSJSONAdditions)
 
 + (NSArray *)arrayWithJSONString:(NSString *)jsonString
