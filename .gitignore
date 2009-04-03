@@ -1,0 +1,4 @@
+BSJSONAdditions.xcodeproj/*.pbxuser
+BSJSONAdditions.xcodeproj/*.perspective*
+BSJSONAdditions.xcodeproj/*.mode*
+build
