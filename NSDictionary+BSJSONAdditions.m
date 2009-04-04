@@ -27,10 +27,10 @@
 #import "NSString+BSJSONAdditions.h"
 
 NSString *jsonIndentString = @"\t"; // Modify this string to change how the output formats.
-const int jsonDoNotIndent = -1;
+const NSInteger jsonDoNotIndent = -1;
 
 @interface NSDictionary (PrivateBSJSONAdditions)
-- (NSString *)jsonStringForValue:(id)value withIndentLevel:(int)level;
+- (NSString *)jsonStringForValue:(id)value withIndentLevel:(NSInteger)level;
 @end
 
 @implementation NSDictionary (BSJSONAdditions)
@@ -49,7 +49,7 @@ const int jsonDoNotIndent = -1;
     return [self jsonStringValueWithIndentLevel:0];
 }
 
-- (NSString *)jsonStringValueWithIndentLevel:(int)level
+- (NSString *)jsonStringValueWithIndentLevel:(NSInteger)level
 {
 	NSMutableString *jsonString = [[NSMutableString alloc] initWithString:jsonObjectStartString];
 	
@@ -75,7 +75,7 @@ const int jsonDoNotIndent = -1;
 
 @implementation NSDictionary (PrivateBSJSONAdditions)
 
-- (NSString *)jsonStringForValue:(id)value withIndentLevel:(int)level
+- (NSString *)jsonStringForValue:(id)value withIndentLevel:(NSInteger)level
 {	
 	NSString *jsonString;
 	if ([value respondsToSelector:@selector(characterAtIndex:)]) // String

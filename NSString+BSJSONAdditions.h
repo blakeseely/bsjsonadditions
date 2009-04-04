@@ -11,7 +11,7 @@
 
 @interface NSString (BSJSONAdditions)
 
-+ (NSString *)jsonIndentStringForLevel:(int)level;
++ (NSString *)jsonIndentStringForLevel:(NSInteger)level;
 - (NSString *)jsonStringValue;
 
 @end

@@ -29,6 +29,6 @@
 
 + (NSArray *)arrayWithJSONString:(NSString *)jsonString;
 - (NSString *)jsonStringValue;
-- (NSString *)jsonStringValueWithIndentLevel:(int)level;
+- (NSString *)jsonStringValueWithIndentLevel:(NSInteger)level;
 
 @end

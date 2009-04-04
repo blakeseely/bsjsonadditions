@@ -11,7 +11,7 @@
 #import "NSString+BSJSONAdditions.h"
 
 @interface NSArray (PrivateBSJSONAdditions)
-- (NSString *)jsonStringForValue:(id)value withIndentLevel:(int)level;
+- (NSString *)jsonStringForValue:(id)value withIndentLevel:(NSInteger)level;
 @end
 
 @implementation NSArray (BSJSONAdditions)
@@ -31,7 +31,7 @@
 	return [self jsonStringValueWithIndentLevel:0];
 }
 
-- (NSString *)jsonStringValueWithIndentLevel:(int)level
+- (NSString *)jsonStringValueWithIndentLevel:(NSInteger)level
 {
 	NSMutableString *jsonString = [[NSMutableString alloc] init];
 	[jsonString appendString:jsonArrayStartString];
@@ -40,7 +40,7 @@
 		[jsonString appendString:[self jsonStringForValue:[self objectAtIndex:0] withIndentLevel:level]];
 	}
 	
-	int i;
+	NSInteger i;
 	for (i = 1; i < [self count]; i++) {
 		[jsonString appendFormat:@"%@ %@", jsonValueSeparatorString, [self jsonStringForValue:[self objectAtIndex:i] withIndentLevel:level]];
 	}
@@ -53,7 +53,7 @@
 
 @implementation NSArray (PrivateBSJSONAdditions)
 
-- (NSString *)jsonStringForValue:(id)value withIndentLevel:(int)level
+- (NSString *)jsonStringForValue:(id)value withIndentLevel:(NSInteger)level
 {	
 	NSString *jsonString;
 	if ([value respondsToSelector:@selector(characterAtIndex:)]) // String

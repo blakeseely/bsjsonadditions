@@ -12,12 +12,12 @@
 
 @implementation NSString (BSJSONAdditions)
 
-+ (NSString *)jsonIndentStringForLevel:(int)level
++ (NSString *)jsonIndentStringForLevel:(NSInteger)level
 {
     NSMutableString *indentString = [[NSMutableString alloc] init];
     if (level != jsonDoNotIndent) {
         [indentString appendString:@"\n"];
-        int i;
+        NSInteger i;
         for (i = 0; i < level; i++) {
             [indentString appendString:jsonIndentString];
         }
@@ -32,7 +32,7 @@
 	[jsonString appendString:jsonStringDelimiterString];
 	
 	// Build the result one character at a time, inserting escaped characters as necessary
-	int i;
+	NSInteger i;
 	unichar nextChar;
 	for (i = 0; i < [self length]; i++) {
 		nextChar = [self characterAtIndex:i];
