@@ -51,31 +51,23 @@ const int jsonDoNotIndent = -1;
 
 - (NSString *)jsonStringValueWithIndentLevel:(int)level
 {
-	NSMutableString *jsonString = [[NSMutableString alloc] init];
-    [jsonString appendString:jsonObjectStartString];
+	NSMutableString *jsonString = [[NSMutableString alloc] initWithString:jsonObjectStartString];
 	
-	NSEnumerator *keyEnum = [self keyEnumerator];
-	NSString *keyString = [keyEnum nextObject];
+  BOOL first = YES;
 	NSString *valueString;
-	if (keyString != nil) {
-		valueString = [self jsonStringForValue:[self objectForKey:keyString] withIndentLevel:level];
-        if (level != jsonDoNotIndent) { // indent before each key
-            [jsonString appendString:[NSString jsonIndentStringForLevel:level]];
-        }            
-		[jsonString appendFormat:@" %@ %@ %@", [keyString jsonStringValue], jsonKeyValueSeparatorString, valueString];
-	}
-	
-	while (keyString = [keyEnum nextObject]) {
-		valueString = [self jsonStringForValue:[self objectForKey:keyString] withIndentLevel:level]; // TODO bail if valueString is nil? How to bail successfully from here?
-        [jsonString appendString:jsonValueSeparatorString];
-        if (level != jsonDoNotIndent) { // indent before each key
-            [jsonString appendFormat:@"%@", [NSString jsonIndentStringForLevel:level]];
-        }
-		[jsonString appendFormat:@" %@ %@ %@", [keyString jsonStringValue], jsonKeyValueSeparatorString, valueString];
-	}
+  for (NSString *keyString in self) {
+    valueString = [self jsonStringForValue:[self objectForKey:keyString] withIndentLevel:level];
+    if (!first) {
+      [jsonString appendString:jsonValueSeparatorString];
+    }
+    if (level != jsonDoNotIndent) { // indent before each key
+      [jsonString appendString:[NSString jsonIndentStringForLevel:level]];
+    }
+    [jsonString appendFormat:@" %@ %@ %@", [keyString jsonStringValue], jsonKeyValueSeparatorString, valueString];
+    first = NO;
+  }
 	
 	[jsonString appendString:jsonObjectEndString];
-	
 	return [jsonString autorelease];
 }
 
