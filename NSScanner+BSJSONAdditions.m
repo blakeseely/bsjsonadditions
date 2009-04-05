@@ -49,10 +49,9 @@ NSString *jsonNullString = @"null";
 	
 	BOOL result = NO;
 	
-    /* START - April 21, 2006 - Updated to bypass irrelevant characters at the beginning of a JSON string */
+    // Bypass irrelevant characters at the beginning of a JSON string
     NSString *ignoredString;
     [self scanUpToString:jsonObjectStartString intoString:&ignoredString];
-    /* END - April 21, 2006 */
 
 	if (![self scanJSONObjectStartString]) {
 		// TODO: Error condition. For now, return false result, do nothing with the dictionary handle
