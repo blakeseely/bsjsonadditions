@@ -114,9 +114,9 @@
 	
 }
 
-- (void)testURLDecode
+- (void)testURLDecodeWithoutEscapedSlashes
 {
-	NSDictionary *testDictionary = [NSDictionary dictionaryWithJSONString:@"{\"Url\":\"http:\/\/scd.mm-b1.yimg.com\/image\/481989943\"}"];
+	NSDictionary *testDictionary = [NSDictionary dictionaryWithJSONString:@"{\"Url\":\"http://scd.mm-b1.yimg.com/image/481989943\"}"];
 	STAssertTrue(1 == [testDictionary count], @"Test URL Decode: Should have ended up with a dictionary with a single entry");
 	
 	NSString *url = [testDictionary objectForKey:@"Url"];
@@ -124,13 +124,21 @@
 	STAssertTrue([url isEqualToString:@"http://scd.mm-b1.yimg.com/image/481989943"], @"Test URL Decode: Didn't end up with the URL we should have");
 }
 
-/* Fixed this but it still reports false - but after a quick look, the strings look identical except for the escaped quotes. Not sure yet why this is failing
+- (void)testURLDecodeWithEscapedSlashes
+{
+	NSDictionary *testDictionary = [NSDictionary dictionaryWithJSONString:@"{\"Url\":\"http:\\/\\/scd.mm-b1.yimg.com\\/image\\/481989943\"}"];
+	STAssertTrue(1 == [testDictionary count], @"Test URL Decode: Should have ended up with a dictionary with a single entry");
+	
+	NSString *url = [testDictionary objectForKey:@"Url"];
+	STAssertNotNil(url, @"Test URL Decode: Resulting dictionary should have had a single key-value pair with the key being \"Url\"");
+	STAssertTrue([url isEqualToString:@"http://scd.mm-b1.yimg.com/image/481989943"], @"Test URL Decode: Didn't end up with the URL we should have");
+}
+
 - (void)testURLEncode
 {
 	NSString *url = @"http://scd.mm-b1.yimg.com/image/481989943";
 	NSString *jsonString = [url jsonStringValue];
-	STAssertTrue([jsonString isEqualToString:@"\"http:\/\/scd.mm-b1.yimg.com\/image\/481989943\""], @"URL did not encode to JSON correctly");
+	STAssertTrue([jsonString isEqualToString:@"\"http:\\/\\/scd.mm-b1.yimg.com\\/image\\/481989943\""], @"URL did not encode to JSON correctly");
 }
- */
 
 @end
