@@ -124,14 +124,13 @@
 	STAssertTrue([url isEqualToString:@"http://scd.mm-b1.yimg.com/image/481989943"], @"Test URL Decode: Didn't end up with the URL we should have");
 }
 
-/* Still working on this one
+/* Fixed this but it still reports false - but after a quick look, the strings look identical except for the escaped quotes. Not sure yet why this is failing
 - (void)testURLEncode
 {
 	NSString *url = @"http://scd.mm-b1.yimg.com/image/481989943";
 	NSString *jsonString = [url jsonStringValue];
-	
 	STAssertTrue([jsonString isEqualToString:@"\"http:\/\/scd.mm-b1.yimg.com\/image\/481989943\""], @"URL did not encode to JSON correctly");
 }
-*/
+ */
 
 @end
