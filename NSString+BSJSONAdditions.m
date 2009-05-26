@@ -6,7 +6,6 @@
 //  Copyright 2009 Apple Inc.. All rights reserved.
 //
 
-#import "NSDictionary+BSJSONAdditions.h"
 #import "NSScanner+BSJSONAdditions.h"
 #import "NSString+BSJSONAdditions.h"
 
@@ -14,16 +13,11 @@
 
 + (NSString *)jsonIndentStringForLevel:(NSInteger)level
 {
-    NSMutableString *indentString = [[NSMutableString alloc] init];
-    if (level != jsonDoNotIndent) {
-        [indentString appendString:@"\n"];
-        NSInteger i;
-        for (i = 0; i < level; i++) {
-            [indentString appendString:jsonIndentString];
-        }
-    }
-    
-    return [indentString autorelease];
+  if (level != jsonDoNotIndent) {
+    return [@"\n" stringByPaddingToLength:(level + 1) withString:jsonIndentString startingAtIndex:0];
+  } else {
+    return [NSString stringWithString: @""];
+  }
 }
 
 - (NSString *)jsonStringValue
@@ -61,13 +55,13 @@
 			case '\t':
 				[jsonString appendString:@"\\t"];
 				break;
-				/* TODO: Find and encode unicode characters here?
-				 case '\u':
-				 [jsonString appendString:@"\\n"];
-				 break;
-				 */
+      /* TODO: Find and encode unicode characters here?
+      case '\u':
+        [jsonString appendString:@"\\n"];
+        break;
+        */
 			default:
-				[jsonString appendString:[NSString stringWithCharacters:&nextChar length:1]];
+				[jsonString appendFormat:@"%c", nextChar];
 				break;
 		}
 	}

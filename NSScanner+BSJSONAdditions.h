@@ -36,6 +36,8 @@ extern NSString *jsonStringEscapedSlashString;
 extern NSString *jsonTrueString;
 extern NSString *jsonFalseString;
 extern NSString *jsonNullString;
+extern NSString *jsonIndentString;
+extern const NSInteger jsonDoNotIndent;
 
 
 @interface NSScanner (PrivateBSJSONAdditions)
@@ -55,5 +57,7 @@ extern NSString *jsonNullString;
 - (BOOL)scanJSONArrayEndString;
 - (BOOL)scanJSONArrayEndString;
 - (BOOL)scanJSONStringDelimiterString;
+
+- (BOOL)scanUnicodeCharacterIntoString:(NSMutableString *)string;
 
 @end

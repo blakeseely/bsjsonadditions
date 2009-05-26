@@ -41,6 +41,9 @@ NSString *jsonTrueString = @"true";
 NSString *jsonFalseString = @"false";
 NSString *jsonNullString = @"null";
 
+NSString *jsonIndentString = @"\t"; // Modify this string to change how the output formats.
+const NSInteger jsonDoNotIndent = -1;
+
 @implementation NSScanner (PrivateBSJSONAdditions)
 
 - (BOOL)scanJSONObject:(NSDictionary **)dictionary
@@ -104,77 +107,51 @@ NSString *jsonNullString = @"null";
 	BOOL result = NO;
 	if ([self scanJSONStringDelimiterString]) {
 		NSMutableString *chars = [[[NSMutableString alloc] init] autorelease];
-		NSString *characterFormat = @"%C";
 		
 		// process character by character until we finish the string or reach another double-quote
 		while ((![self isAtEnd]) && ([[self string] characterAtIndex:[self scanLocation]] != '\"')) {
 			unichar currentChar = [[self string] characterAtIndex:[self scanLocation]];
 			unichar nextChar;
 			if (currentChar != '\\') {
-				[chars appendFormat:characterFormat, currentChar];
+				[chars appendFormat:@"%C", currentChar];
 				[self setScanLocation:([self scanLocation] + 1)];
 			} else {
 				nextChar = [[self string] characterAtIndex:([self scanLocation] + 1)];
 				switch (nextChar) {
 				case '\"':
 					[chars appendString:@"\""];
-					[self setScanLocation:([self scanLocation] + 2)];
 					break;
 				case '\\':
-					[chars appendString:@"\\"]; // debugger shows result as having two slashes, but final output is correct. Possible debugger error?
-					[self setScanLocation:([self scanLocation] + 2)];
+					[chars appendString:@"\\"];
 					break;
 				case '/':
 					[chars appendString:@"/"];
-					[self setScanLocation:([self scanLocation] + 2)];
 					break;
 				case 'b':
 					[chars appendString:@"\b"];
-					[self setScanLocation:([self scanLocation] + 2)];
 					break;
 				case 'f':
 					[chars appendString:@"\f"];
-					[self setScanLocation:([self scanLocation] + 2)];
 					break;
 				case 'n':
 					[chars appendString:@"\n"];
-					[self setScanLocation:([self scanLocation] + 2)];
 					break;
 				case 'r':
 					[chars appendString:@"\r"];
-					[self setScanLocation:([self scanLocation] + 2)];
 					break;
 				case 't':
 					[chars appendString:@"\t"];
-					[self setScanLocation:([self scanLocation] + 2)];
 					break;
 				case 'u': // unicode sequence - get string of hex chars, convert to int, convert to unichar, append
 					[self setScanLocation:([self scanLocation] + 2)]; // advance past '\u'
-					NSString *digits = [[self string] substringWithRange:NSMakeRange([self scanLocation], 4)];
-					/* START Updated code modified from code fix submitted by Bill Garrison - March 28, 2006 - http://www.standardorbit.net */
-                    NSScanner *hexScanner = [NSScanner scannerWithString:digits];
-                    NSString *verifiedHexDigits;
-                    NSCharacterSet *hexDigitSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFabcdef"];
-					if (NO == [hexScanner scanCharactersFromSet:hexDigitSet intoString:&verifiedHexDigits])
-                        return NO;
-                    if (4 != [verifiedHexDigits length])
-                        return NO;
-                        
-                    // Read in the hex value
-                    [hexScanner setScanLocation:0];
-                    unsigned unicodeHexValue;
-                    if (NO == [hexScanner scanHexInt:&unicodeHexValue]) {
-                        return NO;
-                    }
-                    [chars appendFormat:characterFormat, unicodeHexValue];
-                    /* END update - March 28, 2006 */
-					[self setScanLocation:([self scanLocation] + 4)];
+          if (![self scanUnicodeCharacterIntoString: chars]) return NO;
+					[self setScanLocation:([self scanLocation] + 2)];
 					break;
 				default:
 					[chars appendFormat:@"\\%C", nextChar];
-					[self setScanLocation:([self scanLocation] + 2)];
 					break;
 				}
+				[self setScanLocation:([self scanLocation] + 2)];
 			}
 		}
 		
@@ -210,53 +187,79 @@ NSString *jsonNullString = @"null";
 	return result;
 }
 
+- (BOOL)scanUnicodeCharacterIntoString:(NSMutableString *)string
+{
+  NSString *digits = [[self string] substringWithRange:NSMakeRange([self scanLocation], 4)];
+  /* START Updated code modified from code fix submitted by Bill Garrison
+           - March 28, 2006 - http://www.standardorbit.net */
+  NSScanner *hexScanner = [NSScanner scannerWithString:digits];
+  NSString *verifiedHexDigits;
+  NSCharacterSet *hexDigitSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFabcdef"];
+  if (NO == [hexScanner scanCharactersFromSet:hexDigitSet intoString:&verifiedHexDigits]) {
+    return NO;
+  }
+  if (4 != [verifiedHexDigits length]) {
+    return NO;
+  }
+  
+  // Read in the hex value
+  [hexScanner setScanLocation:0];
+  unsigned unicodeHexValue;
+  if (NO == [hexScanner scanHexInt:&unicodeHexValue]) {
+    return NO;
+  }
+  [string appendFormat:@"%C", unicodeHexValue];
+  /* END update - March 28, 2006 */
+  return YES;
+}
+
+- (NSUInteger)locationOfString:(NSString *)searchedString
+{
+	// Since we have already scanned white space, we know that we're at the start of some value, and each of the strings
+	// is at most four characters, so just look ahead that many spaces. (In previous versions of the code, I was scanning
+	// ahead through the entire string, but this was incredibly expensive for long strings - adding massive amounts of
+	// time to scan way past the string we might care about)
+
+  NSUInteger scanLength = [[self string] length] - [self scanLocation];
+  scanLength = MIN(scanLength, searchedString.length);
+  NSRange searchRange = NSMakeRange([self scanLocation], scanLength);
+	return [[self string] rangeOfString:searchedString options:0 range:searchRange].location;
+}
+
 - (BOOL)scanJSONValue:(id *)value
 {
 	BOOL result = NO;
 	
 	[self scanJSONWhiteSpace];
 	
-	NSString *substring = [[self string] substringWithRange:NSMakeRange([self scanLocation], 1)];
-	
-	// Since we have already scanned white space, we know that we're at the start of some value, and each of the strings below is at most
-	// four characters, so just look ahead that many spaces. (In previous versions of the code, I was scanning ahead through the entire string, but this
-	// was incredibly expensive for long strings - adding massive amounts of time to scan way past the string we might care about)
-	NSUInteger scanLength = [[self string] length] - [self scanLocation];
-	if (scanLength > [jsonTrueString length])
-		scanLength = [jsonTrueString length];
-	NSUInteger trueLocation = [[self string] rangeOfString:jsonTrueString options:0 range:NSMakeRange([self scanLocation], scanLength)].location;
-	
-	scanLength = [[self string] length] - [self scanLocation];
-	if (scanLength > [jsonFalseString length])
-		scanLength = [jsonFalseString length];
-	NSUInteger falseLocation = [[self string] rangeOfString:jsonFalseString options:0 range:NSMakeRange([self scanLocation], scanLength)].location;
-	
-	scanLength = [[self string] length] - [self scanLocation];
-	if (scanLength > [jsonNullString length])
-		scanLength = [jsonNullString length];
-	NSUInteger nullLocation = [[self string] rangeOfString:jsonNullString options:0 range:NSMakeRange([self scanLocation], scanLength)].location;
-	
+  NSUInteger scanLocation = [self scanLocation];
+  NSUInteger trueLocation = [self locationOfString:jsonTrueString];
+  NSUInteger falseLocation = [self locationOfString:jsonFalseString];
+  NSUInteger nullLocation = [self locationOfString:jsonNullString];
+  unichar currentCharacter = [[self string] characterAtIndex:scanLocation];
+  NSCharacterSet *digits = [NSCharacterSet decimalDigitCharacterSet];
+  NSString *substring = [NSString stringWithFormat: @"%c", currentCharacter];
+
 	if ([substring isEqualToString:jsonStringDelimiterString]) {
 		result = [self scanJSONString:value];
 	} else if ([substring isEqualToString:jsonObjectStartString]) {
 		result = [self scanJSONObject:value];
 	} else if ([substring isEqualToString:jsonArrayStartString]) {
 		result = [self scanJSONArray:value];
-	} else if ([self scanLocation] == trueLocation) {
+	} else if (scanLocation == trueLocation) {
 		result = YES;
 		*value = [NSNumber numberWithBool:YES];
-		[self setScanLocation:([self scanLocation] + [jsonTrueString length])];
-	} else if ([self scanLocation] == falseLocation) {
+		[self setScanLocation:(scanLocation + jsonTrueString.length)];
+	} else if (scanLocation == falseLocation) {
 		result = YES;
 		*value = [NSNumber numberWithBool:NO];
-		[self setScanLocation:([self scanLocation] + [jsonFalseString length])];
-	} else if ([self scanLocation] == nullLocation) {
+		[self setScanLocation:(scanLocation + jsonFalseString.length)];
+	} else if (scanLocation == nullLocation) {
 		result = YES;
 		*value = [NSNull null];
-		[self setScanLocation:([self scanLocation] + [jsonNullString length])];
-	} else if (([[NSCharacterSet decimalDigitCharacterSet] characterIsMember:[[self string] characterAtIndex:[self scanLocation]]]) ||
-			   ([[self string] characterAtIndex:[self scanLocation]] == '-')){ // check to make sure it's a digit or -
-		result =  [self scanJSONNumber:value];
+		[self setScanLocation:(scanLocation + jsonNullString.length)];
+	} else if (([digits characterIsMember:currentCharacter]) || (currentCharacter == '-')) {
+		result = [self scanJSONNumber:value];
 	}
 	return result;
 }

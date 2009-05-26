@@ -23,9 +23,6 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString *jsonIndentString;
-extern const NSInteger jsonDoNotIndent;
-
 @interface NSDictionary (BSJSONAdditions)
 + (NSDictionary *)dictionaryWithJSONString:(NSString *)jsonString;
 
