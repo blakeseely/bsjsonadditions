@@ -35,7 +35,7 @@
 				[jsonString appendString:@"\\\""];
 				break;
 			case '\\':
-				[jsonString appendString:@"\\n"];
+				[jsonString appendString:@"\\\\"];
 				break;
 			case '/':
 				[jsonString appendString:@"\\/"];
