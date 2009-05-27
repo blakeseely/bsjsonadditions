@@ -10,8 +10,5 @@
 
 
 @interface NSArray_UnitTests : SenTestCase
-{
-	NSScanner *theScanner;
-}
 
 @end

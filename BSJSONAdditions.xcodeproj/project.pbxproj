@@ -15,27 +15,22 @@
 		2889EE960F7956BB00B514B9 /* NSArray+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EE940F7956BB00B514B9 /* NSArray+BSJSONAdditions.m */; };
 		2889EE9C0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EE9B0F7997E500B514B9 /* NSString+BSJSONAdditions.m */; };
 		2889EE9D0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EE9B0F7997E500B514B9 /* NSString+BSJSONAdditions.m */; };
-		2889EEB20F799BA600B514B9 /* NSArray_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EEB00F799BA600B514B9 /* NSArray_UnitTests.m */; };
-		2897131509DB069800FD8236 /* BSJSONScanner_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2897131309DB069800FD8236 /* BSJSONScanner_UnitTests.m */; };
-		289A90380992AB180026B656 /* json_test_valid_01.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90330992AB180026B656 /* json_test_valid_01.txt */; };
-		289A90390992AB180026B656 /* json_test_valid_03.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90340992AB180026B656 /* json_test_valid_03.txt */; };
-		289A903A0992AB180026B656 /* json_test_valid_02.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90350992AB180026B656 /* json_test_valid_02.txt */; };
-		289A903B0992AB180026B656 /* json_test_valid_05.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90360992AB180026B656 /* json_test_valid_05.txt */; };
-		289A903C0992AB180026B656 /* json_test_valid_04.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90370992AB180026B656 /* json_test_valid_04.txt */; };
-		289A903D0992AB180026B656 /* json_test_valid_01.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90330992AB180026B656 /* json_test_valid_01.txt */; };
-		289A903E0992AB180026B656 /* json_test_valid_03.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90340992AB180026B656 /* json_test_valid_03.txt */; };
-		289A903F0992AB180026B656 /* json_test_valid_02.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90350992AB180026B656 /* json_test_valid_02.txt */; };
-		289A90400992AB180026B656 /* json_test_valid_05.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90360992AB180026B656 /* json_test_valid_05.txt */; };
-		289A90410992AB180026B656 /* json_test_valid_04.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A90370992AB180026B656 /* json_test_valid_04.txt */; };
-		289A90470992AC4A0026B656 /* JSONValidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289A90460992AC4A0026B656 /* JSONValidTests.m */; };
-		289A90480992AC4A0026B656 /* JSONValidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289A90460992AC4A0026B656 /* JSONValidTests.m */; };
 		289A90620992AF6B0026B656 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289A90610992AF6B0026B656 /* SenTestingKit.framework */; };
 		289A90630992AF6B0026B656 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289A90610992AF6B0026B656 /* SenTestingKit.framework */; };
-		289A91820994005D0026B656 /* json_test_valid_06.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A91810994005D0026B656 /* json_test_valid_06.txt */; };
-		289A91830994005D0026B656 /* json_test_valid_06.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289A91810994005D0026B656 /* json_test_valid_06.txt */; };
-		28A021670DC0F11000324B9B /* json_test_invalid_01.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28A021660DC0F11000324B9B /* json_test_invalid_01.txt */; };
 		581BAB610FCC62C100FC9A5F /* BSJSONEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 581BAB600FCC62C100FC9A5F /* BSJSONEncoder.m */; };
 		581BAB6F0FCC693200FC9A5F /* BSJSONEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 581BAB600FCC62C100FC9A5F /* BSJSONEncoder.m */; };
+		58B809040FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B808FF0FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.m */; };
+		58B809050FCDBDB8002EBA8C /* JSONValidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B809010FCDBDB8002EBA8C /* JSONValidTests.m */; };
+		58B809060FCDBDB8002EBA8C /* NSArray_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B809030FCDBDB8002EBA8C /* NSArray_UnitTests.m */; };
+		58B8090E0FCDBDD9002EBA8C /* json_test_invalid_01.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58B809070FCDBDD9002EBA8C /* json_test_invalid_01.txt */; };
+		58B8090F0FCDBDD9002EBA8C /* json_test_valid_01.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58B809080FCDBDD9002EBA8C /* json_test_valid_01.txt */; };
+		58B809100FCDBDD9002EBA8C /* json_test_valid_02.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58B809090FCDBDD9002EBA8C /* json_test_valid_02.txt */; };
+		58B809110FCDBDD9002EBA8C /* json_test_valid_03.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58B8090A0FCDBDD9002EBA8C /* json_test_valid_03.txt */; };
+		58B809120FCDBDD9002EBA8C /* json_test_valid_04.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58B8090B0FCDBDD9002EBA8C /* json_test_valid_04.txt */; };
+		58B809130FCDBDD9002EBA8C /* json_test_valid_05.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58B8090C0FCDBDD9002EBA8C /* json_test_valid_05.txt */; };
+		58B809140FCDBDD9002EBA8C /* json_test_valid_06.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58B8090D0FCDBDD9002EBA8C /* json_test_valid_06.txt */; };
+		58B809170FCDBDE5002EBA8C /* NSString_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B809160FCDBDE5002EBA8C /* NSString_UnitTests.m */; };
+		58B809400FCDC791002EBA8C /* NSDictionary_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B8093F0FCDC791002EBA8C /* NSDictionary_UnitTests.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -66,20 +61,7 @@
 		2889EE940F7956BB00B514B9 /* NSArray+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BSJSONAdditions.m"; sourceTree = "<group>"; };
 		2889EE9A0F7997E500B514B9 /* NSString+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BSJSONAdditions.h"; sourceTree = "<group>"; };
 		2889EE9B0F7997E500B514B9 /* NSString+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BSJSONAdditions.m"; sourceTree = "<group>"; };
-		2889EEAF0F799BA600B514B9 /* NSArray_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSArray_UnitTests.h; path = "Unit Tests/NSArray_UnitTests.h"; sourceTree = "<group>"; };
-		2889EEB00F799BA600B514B9 /* NSArray_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArray_UnitTests.m; path = "Unit Tests/NSArray_UnitTests.m"; sourceTree = "<group>"; };
-		2897131309DB069800FD8236 /* BSJSONScanner_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = BSJSONScanner_UnitTests.m; path = "Unit Tests/BSJSONScanner_UnitTests.m"; sourceTree = "<group>"; };
-		2897131409DB069800FD8236 /* BSJSONScanner_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BSJSONScanner_UnitTests.h; path = "Unit Tests/BSJSONScanner_UnitTests.h"; sourceTree = "<group>"; };
-		289A90330992AB180026B656 /* json_test_valid_01.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = json_test_valid_01.txt; path = "Unit Tests/Test Files/json_test_valid_01.txt"; sourceTree = "<group>"; };
-		289A90340992AB180026B656 /* json_test_valid_03.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = json_test_valid_03.txt; path = "Unit Tests/Test Files/json_test_valid_03.txt"; sourceTree = "<group>"; };
-		289A90350992AB180026B656 /* json_test_valid_02.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = json_test_valid_02.txt; path = "Unit Tests/Test Files/json_test_valid_02.txt"; sourceTree = "<group>"; };
-		289A90360992AB180026B656 /* json_test_valid_05.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = json_test_valid_05.txt; path = "Unit Tests/Test Files/json_test_valid_05.txt"; sourceTree = "<group>"; };
-		289A90370992AB180026B656 /* json_test_valid_04.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = json_test_valid_04.txt; path = "Unit Tests/Test Files/json_test_valid_04.txt"; sourceTree = "<group>"; };
-		289A90450992AC4A0026B656 /* JSONValidTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONValidTests.h; path = "Unit Tests/JSONValidTests.h"; sourceTree = "<group>"; };
-		289A90460992AC4A0026B656 /* JSONValidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONValidTests.m; path = "Unit Tests/JSONValidTests.m"; sourceTree = "<group>"; };
 		289A90610992AF6B0026B656 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/SenTestingKit.framework; sourceTree = "<absolute>"; };
-		289A91810994005D0026B656 /* json_test_valid_06.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = json_test_valid_06.txt; path = "Unit Tests/Test Files/json_test_valid_06.txt"; sourceTree = "<group>"; };
-		28A021660DC0F11000324B9B /* json_test_invalid_01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json_test_invalid_01.txt; path = "Unit Tests/Test Files/json_test_invalid_01.txt"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -87,6 +69,23 @@
 		32CA4F630368D1EE00C91783 /* BSJSONAdditions_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSJSONAdditions_Prefix.pch; sourceTree = "<group>"; };
 		581BAB5F0FCC62C100FC9A5F /* BSJSONEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSJSONEncoder.h; sourceTree = "<group>"; };
 		581BAB600FCC62C100FC9A5F /* BSJSONEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSJSONEncoder.m; sourceTree = "<group>"; };
+		58B808FE0FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSJSONScanner_UnitTests.h; sourceTree = "<group>"; };
+		58B808FF0FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSJSONScanner_UnitTests.m; sourceTree = "<group>"; };
+		58B809000FCDBDB8002EBA8C /* JSONValidTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValidTests.h; sourceTree = "<group>"; };
+		58B809010FCDBDB8002EBA8C /* JSONValidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValidTests.m; sourceTree = "<group>"; };
+		58B809020FCDBDB8002EBA8C /* NSArray_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_UnitTests.h; sourceTree = "<group>"; };
+		58B809030FCDBDB8002EBA8C /* NSArray_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_UnitTests.m; sourceTree = "<group>"; };
+		58B809070FCDBDD9002EBA8C /* json_test_invalid_01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_invalid_01.txt; sourceTree = "<group>"; };
+		58B809080FCDBDD9002EBA8C /* json_test_valid_01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_valid_01.txt; sourceTree = "<group>"; };
+		58B809090FCDBDD9002EBA8C /* json_test_valid_02.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_valid_02.txt; sourceTree = "<group>"; };
+		58B8090A0FCDBDD9002EBA8C /* json_test_valid_03.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_valid_03.txt; sourceTree = "<group>"; };
+		58B8090B0FCDBDD9002EBA8C /* json_test_valid_04.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_valid_04.txt; sourceTree = "<group>"; };
+		58B8090C0FCDBDD9002EBA8C /* json_test_valid_05.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_valid_05.txt; sourceTree = "<group>"; };
+		58B8090D0FCDBDD9002EBA8C /* json_test_valid_06.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_valid_06.txt; sourceTree = "<group>"; };
+		58B809150FCDBDE5002EBA8C /* NSString_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString_UnitTests.h; sourceTree = "<group>"; };
+		58B809160FCDBDE5002EBA8C /* NSString_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_UnitTests.m; sourceTree = "<group>"; };
+		58B8093E0FCDC791002EBA8C /* NSDictionary_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_UnitTests.h; sourceTree = "<group>"; };
+		58B8093F0FCDC791002EBA8C /* NSDictionary_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_UnitTests.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* BSJSONAdditions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSJSONAdditions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -160,29 +159,33 @@
 		289A902F0992AA150026B656 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				2897131409DB069800FD8236 /* BSJSONScanner_UnitTests.h */,
-				2897131309DB069800FD8236 /* BSJSONScanner_UnitTests.m */,
-				289A90450992AC4A0026B656 /* JSONValidTests.h */,
-				289A90460992AC4A0026B656 /* JSONValidTests.m */,
-				2889EEAF0F799BA600B514B9 /* NSArray_UnitTests.h */,
-				2889EEB00F799BA600B514B9 /* NSArray_UnitTests.m */,
+				58B808FE0FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.h */,
+				58B808FF0FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.m */,
+				58B809000FCDBDB8002EBA8C /* JSONValidTests.h */,
+				58B809010FCDBDB8002EBA8C /* JSONValidTests.m */,
+				58B809020FCDBDB8002EBA8C /* NSArray_UnitTests.h */,
+				58B809030FCDBDB8002EBA8C /* NSArray_UnitTests.m */,
+				58B809150FCDBDE5002EBA8C /* NSString_UnitTests.h */,
+				58B809160FCDBDE5002EBA8C /* NSString_UnitTests.m */,
+				58B8093E0FCDC791002EBA8C /* NSDictionary_UnitTests.h */,
+				58B8093F0FCDC791002EBA8C /* NSDictionary_UnitTests.m */,
 				289A90300992AA1F0026B656 /* Test Files */,
 			);
-			name = "Unit Tests";
+			path = "Unit Tests";
 			sourceTree = "<group>";
 		};
 		289A90300992AA1F0026B656 /* Test Files */ = {
 			isa = PBXGroup;
 			children = (
-				28A021660DC0F11000324B9B /* json_test_invalid_01.txt */,
-				289A90330992AB180026B656 /* json_test_valid_01.txt */,
-				289A90340992AB180026B656 /* json_test_valid_03.txt */,
-				289A90350992AB180026B656 /* json_test_valid_02.txt */,
-				289A90370992AB180026B656 /* json_test_valid_04.txt */,
-				289A90360992AB180026B656 /* json_test_valid_05.txt */,
-				289A91810994005D0026B656 /* json_test_valid_06.txt */,
+				58B809070FCDBDD9002EBA8C /* json_test_invalid_01.txt */,
+				58B809080FCDBDD9002EBA8C /* json_test_valid_01.txt */,
+				58B809090FCDBDD9002EBA8C /* json_test_valid_02.txt */,
+				58B8090A0FCDBDD9002EBA8C /* json_test_valid_03.txt */,
+				58B8090B0FCDBDD9002EBA8C /* json_test_valid_04.txt */,
+				58B8090C0FCDBDD9002EBA8C /* json_test_valid_05.txt */,
+				58B8090D0FCDBDD9002EBA8C /* json_test_valid_06.txt */,
 			);
-			name = "Test Files";
+			path = "Test Files";
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* BSJSONAdditions */ = {
@@ -290,13 +293,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				289A903D0992AB180026B656 /* json_test_valid_01.txt in Resources */,
-				289A903E0992AB180026B656 /* json_test_valid_03.txt in Resources */,
-				289A903F0992AB180026B656 /* json_test_valid_02.txt in Resources */,
-				289A90400992AB180026B656 /* json_test_valid_05.txt in Resources */,
-				289A90410992AB180026B656 /* json_test_valid_04.txt in Resources */,
-				289A91830994005D0026B656 /* json_test_valid_06.txt in Resources */,
-				28A021670DC0F11000324B9B /* json_test_invalid_01.txt in Resources */,
+				58B8090E0FCDBDD9002EBA8C /* json_test_invalid_01.txt in Resources */,
+				58B8090F0FCDBDD9002EBA8C /* json_test_valid_01.txt in Resources */,
+				58B809100FCDBDD9002EBA8C /* json_test_valid_02.txt in Resources */,
+				58B809110FCDBDD9002EBA8C /* json_test_valid_03.txt in Resources */,
+				58B809120FCDBDD9002EBA8C /* json_test_valid_04.txt in Resources */,
+				58B809130FCDBDD9002EBA8C /* json_test_valid_05.txt in Resources */,
+				58B809140FCDBDD9002EBA8C /* json_test_valid_06.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,12 +309,6 @@
 			files = (
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				289A90380992AB180026B656 /* json_test_valid_01.txt in Resources */,
-				289A90390992AB180026B656 /* json_test_valid_03.txt in Resources */,
-				289A903A0992AB180026B656 /* json_test_valid_02.txt in Resources */,
-				289A903B0992AB180026B656 /* json_test_valid_05.txt in Resources */,
-				289A903C0992AB180026B656 /* json_test_valid_04.txt in Resources */,
-				289A91820994005D0026B656 /* json_test_valid_06.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,12 +337,14 @@
 			files = (
 				28278CF50991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m in Sources */,
 				28278CFA0991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m in Sources */,
-				289A90480992AC4A0026B656 /* JSONValidTests.m in Sources */,
-				2897131509DB069800FD8236 /* BSJSONScanner_UnitTests.m in Sources */,
 				2889EE950F7956BB00B514B9 /* NSArray+BSJSONAdditions.m in Sources */,
 				2889EE9D0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */,
-				2889EEB20F799BA600B514B9 /* NSArray_UnitTests.m in Sources */,
 				581BAB610FCC62C100FC9A5F /* BSJSONEncoder.m in Sources */,
+				58B809040FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.m in Sources */,
+				58B809050FCDBDB8002EBA8C /* JSONValidTests.m in Sources */,
+				58B809060FCDBDB8002EBA8C /* NSArray_UnitTests.m in Sources */,
+				58B809170FCDBDE5002EBA8C /* NSString_UnitTests.m in Sources */,
+				58B809400FCDC791002EBA8C /* NSDictionary_UnitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +355,6 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				28278CF60991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m in Sources */,
 				28278CF90991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m in Sources */,
-				289A90470992AC4A0026B656 /* JSONValidTests.m in Sources */,
 				2889EE960F7956BB00B514B9 /* NSArray+BSJSONAdditions.m in Sources */,
 				2889EE9C0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */,
 				581BAB6F0FCC693200FC9A5F /* BSJSONEncoder.m in Sources */,
