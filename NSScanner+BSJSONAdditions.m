@@ -267,9 +267,11 @@ const NSInteger jsonDoNotIndent = -1;
 - (BOOL)scanJSONNumber:(NSNumber **)number
 {
 	NSDecimal decimal;
-	BOOL result = [self scanDecimal:&decimal];
-	*number = [NSDecimalNumber decimalNumberWithDecimal:decimal];
-	return result;
+	BOOL isDecimal = [self scanDecimal:&decimal];
+	if ( isDecimal ) {
+		*number = [NSDecimalNumber decimalNumberWithDecimal:decimal];
+	}
+	return isDecimal;
 }
 
 - (BOOL)scanJSONWhiteSpace

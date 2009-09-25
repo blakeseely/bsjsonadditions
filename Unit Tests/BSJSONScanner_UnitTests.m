@@ -85,6 +85,14 @@ inline BOOL ScanArray(NSString *inString, id *outResult)
 	STAssertEqualObjects(theObject, [NSNull null], @"Result of scan didn't match expectations.");
 }
 
+- (void) testInvalidNumber;
+{	
+	id number = nil;
+	BOOL isDecimal = [[NSScanner scannerWithString:@"abc"] scanJSONNumber:&number];
+	STAssertFalse( isDecimal, @"postcondition violated" );
+	STAssertNil( number, @"postcondition violated" );
+}
+
 - (void)testNumber
 {
 	id theObject = nil;

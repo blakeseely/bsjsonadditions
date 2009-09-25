@@ -16,7 +16,7 @@
 - (void)testValidJSON
 {
 	// test 'json_test_valid_01.txt"
-	NSString *testFilePath = [[NSBundle mainBundle] pathForResource:@"json_test_valid_01" ofType:@"txt"];
+	NSString *testFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"json_test_valid_01" ofType:@"txt"];
 	STAssertNotNil(testFilePath, @"Could not find the test file named \"json_test_valid_01.txt\"");
 	NSString *jsonString = [NSString stringWithContentsOfFile:testFilePath];
 	STAssertNotNil(jsonString, @"Could not create an NSString from the file at path %@", testFilePath);
@@ -38,7 +38,7 @@
 	
 	
 	// test 'json_test_valid_02.txt"
-	testFilePath = [[NSBundle mainBundle] pathForResource:@"json_test_valid_02" ofType:@"txt"];
+	testFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"json_test_valid_02" ofType:@"txt"];
 	STAssertNotNil(testFilePath, @"Could not find the test file named \"json_test_valid_02.txt\"");
 	jsonString = [NSString stringWithContentsOfFile:testFilePath];
 	STAssertNotNil(jsonString, @"Could not create an NSString from the file at path %@", testFilePath);
@@ -57,7 +57,7 @@
 	
 	
 	// test 'json_test_valid_03.txt"
-	testFilePath = [[NSBundle mainBundle] pathForResource:@"json_test_valid_03" ofType:@"txt"];
+	testFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"json_test_valid_03" ofType:@"txt"];
 	STAssertNotNil(testFilePath, @"Could not find the test file named \"json_test_valid_03.txt\"");
 	jsonString = [NSString stringWithContentsOfFile:testFilePath];
 	STAssertNotNil(jsonString, @"Could not create an NSString from the file at path %@", testFilePath);
@@ -72,7 +72,7 @@
 	STAssertEquals(500, width, @"Expected value of 500, but got %i", width);
 
 	// test 'json_test_valid_04.txt"
-	testFilePath = [[NSBundle mainBundle] pathForResource:@"json_test_valid_04" ofType:@"txt"];
+	testFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"json_test_valid_04" ofType:@"txt"];
 	STAssertNotNil(testFilePath, @"Could not find the test file named \"json_test_valid_04.txt\"");
 	jsonString = [NSString stringWithContentsOfFile:testFilePath];
 	STAssertNotNil(jsonString, @"Could not create an NSString from the file at path %@", testFilePath);
@@ -85,7 +85,7 @@
 	// value checks
 	
 	// test 'json_test_valid_05.txt"
-	testFilePath = [[NSBundle mainBundle] pathForResource:@"json_test_valid_05" ofType:@"txt"];
+	testFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"json_test_valid_05" ofType:@"txt"];
 	STAssertNotNil(testFilePath, @"Could not find the test file named \"json_test_valid_05.txt\"");
 	jsonString = [NSString stringWithContentsOfFile:testFilePath];
 	STAssertNotNil(jsonString, @"Could not create an NSString from the file at path %@", testFilePath);
@@ -102,7 +102,7 @@
 	STAssertEquals([NSNull null], [[dict valueForKeyPath:@"menu.items"] objectAtIndex:2], @"Expected a null value in index 2");
 	
 	// test 'json_test_valid_06.txt"
-	testFilePath = [[NSBundle mainBundle] pathForResource:@"json_test_valid_06" ofType:@"txt"];
+	testFilePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"json_test_valid_06" ofType:@"txt"];
 	STAssertNotNil(testFilePath, @"Could not find the test file named \"json_test_valid_06.txt\"");
 	jsonString = [NSString stringWithContentsOfFile:testFilePath];
 	STAssertNotNil(jsonString, @"Could not create an NSString from the file at path %@", testFilePath);
