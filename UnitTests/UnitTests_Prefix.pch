@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'UnitTests' target in the 'BSJSONAdditions' project
+//
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <SenTestingKit/SenTestingKit.h>
+#import "NSScanner+BSJSONAdditions.h"
+#import "NSArray+BSJSONAdditions.h"
+#import "NSDictionary+BSJSONAdditions.h"
+#import "NSString+BSJSONAdditions.h"
+#endif

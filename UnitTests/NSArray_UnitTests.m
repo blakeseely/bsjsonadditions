@@ -6,8 +6,8 @@
 //  Copyright 2009 Apple Inc.. All rights reserved.
 //
 
-#import "NSArray_UnitTests.h"
-#import "NSArray+BSJSONAdditions.h"
+@interface NSArray_UnitTests : SenTestCase
+@end
 
 @implementation NSArray_UnitTests
 

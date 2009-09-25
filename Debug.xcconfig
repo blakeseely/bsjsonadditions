@@ -1,0 +1,15 @@
+//
+//  Debug.xcconfig
+//  BSJSONAdditions
+//
+//  Created by William Garrison on 9/25/09.
+//
+
+#include "Release.xcconfig"
+
+GCC_OPTIMIZATION_LEVEL = 0
+
+WARNING_CFLAGS = -Wall
+ONLY_ACTIVE_ARCH = YES
+
+COPY_PHASE_STRIP = NO

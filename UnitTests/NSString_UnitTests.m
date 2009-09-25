@@ -3,8 +3,10 @@
 //  BSJSONAdditions
 //
 
-#import "NSString_UnitTests.h"
-#import "NSString+BSJSONAdditions.h"
+@interface NSString_UnitTests : SenTestCase
+{
+}
+@end
 
 @implementation NSString_UnitTests
 

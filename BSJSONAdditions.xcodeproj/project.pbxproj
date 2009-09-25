@@ -6,20 +6,27 @@
 	objectVersion = 42;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B146FF2F106D1FA600C857BF /* Configure Project for Unit Testing */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B146FF4A106D200D00C857BF /* Build configuration list for PBXAggregateTarget "Configure Project for Unit Testing" */;
+			buildPhases = (
+				B146FF2E106D1FA600C857BF /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Configure Project for Unit Testing";
+			productName = Untitled;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		28278CF50991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 28278CF40991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m */; };
-		28278CF60991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 28278CF40991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m */; };
-		28278CF90991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 28278CF80991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m */; };
 		28278CFA0991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 28278CF80991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m */; };
 		2889EE950F7956BB00B514B9 /* NSArray+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EE940F7956BB00B514B9 /* NSArray+BSJSONAdditions.m */; };
-		2889EE960F7956BB00B514B9 /* NSArray+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EE940F7956BB00B514B9 /* NSArray+BSJSONAdditions.m */; };
-		2889EE9C0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EE9B0F7997E500B514B9 /* NSString+BSJSONAdditions.m */; };
 		2889EE9D0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2889EE9B0F7997E500B514B9 /* NSString+BSJSONAdditions.m */; };
-		289A90620992AF6B0026B656 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289A90610992AF6B0026B656 /* SenTestingKit.framework */; };
-		289A90630992AF6B0026B656 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289A90610992AF6B0026B656 /* SenTestingKit.framework */; };
 		581BAB610FCC62C100FC9A5F /* BSJSONEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 581BAB600FCC62C100FC9A5F /* BSJSONEncoder.m */; };
-		581BAB6F0FCC693200FC9A5F /* BSJSONEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 581BAB600FCC62C100FC9A5F /* BSJSONEncoder.m */; };
-		58B809040FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B808FF0FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.m */; };
+		58B809040FCDBDB8002EBA8C /* NSScannerAdditionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B808FF0FCDBDB8002EBA8C /* NSScannerAdditionTests.m */; };
 		58B809050FCDBDB8002EBA8C /* JSONValidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B809010FCDBDB8002EBA8C /* JSONValidTests.m */; };
 		58B809060FCDBDB8002EBA8C /* NSArray_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B809030FCDBDB8002EBA8C /* NSArray_UnitTests.m */; };
 		58B8090E0FCDBDD9002EBA8C /* json_test_invalid_01.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58B809070FCDBDD9002EBA8C /* json_test_invalid_01.txt */; };
@@ -31,28 +38,13 @@
 		58B809140FCDBDD9002EBA8C /* json_test_valid_06.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58B8090D0FCDBDD9002EBA8C /* json_test_valid_06.txt */; };
 		58B809170FCDBDE5002EBA8C /* NSString_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B809160FCDBDE5002EBA8C /* NSString_UnitTests.m */; };
 		58B809400FCDC791002EBA8C /* NSDictionary_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B8093F0FCDC791002EBA8C /* NSDictionary_UnitTests.m */; };
-		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
-		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
-		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
-		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B146FD32106D157400C857BF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B146FD31106D157400C857BF /* SenTestingKit.framework */; };
+		B146FDD6106D1F2900C857BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		28278CF00991DC5800BCE5A7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090;
-			remoteInfo = BSJSONAdditions;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		28278CEA0991DC5000BCE5A7 /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		28278CEB0991DC5000BCE5A7 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
+		28278CEA0991DC5000BCE5A7 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28278CEB0991DC5000BCE5A7 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		28278CF30991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+BSJSONAdditions.h"; sourceTree = "<group>"; };
 		28278CF40991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BSJSONAdditions.m"; sourceTree = "<group>"; };
 		28278CF70991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScanner+BSJSONAdditions.h"; sourceTree = "<group>"; };
@@ -61,19 +53,11 @@
 		2889EE940F7956BB00B514B9 /* NSArray+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BSJSONAdditions.m"; sourceTree = "<group>"; };
 		2889EE9A0F7997E500B514B9 /* NSString+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BSJSONAdditions.h"; sourceTree = "<group>"; };
 		2889EE9B0F7997E500B514B9 /* NSString+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BSJSONAdditions.m"; sourceTree = "<group>"; };
-		289A90610992AF6B0026B656 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/SenTestingKit.framework; sourceTree = "<absolute>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
-		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		32CA4F630368D1EE00C91783 /* BSJSONAdditions_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSJSONAdditions_Prefix.pch; sourceTree = "<group>"; };
 		581BAB5F0FCC62C100FC9A5F /* BSJSONEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSJSONEncoder.h; sourceTree = "<group>"; };
 		581BAB600FCC62C100FC9A5F /* BSJSONEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSJSONEncoder.m; sourceTree = "<group>"; };
-		58B808FE0FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSJSONScanner_UnitTests.h; sourceTree = "<group>"; };
-		58B808FF0FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSJSONScanner_UnitTests.m; sourceTree = "<group>"; };
-		58B809000FCDBDB8002EBA8C /* JSONValidTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValidTests.h; sourceTree = "<group>"; };
+		58B808FF0FCDBDB8002EBA8C /* NSScannerAdditionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScannerAdditionTests.m; sourceTree = "<group>"; };
 		58B809010FCDBDB8002EBA8C /* JSONValidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValidTests.m; sourceTree = "<group>"; };
-		58B809020FCDBDB8002EBA8C /* NSArray_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_UnitTests.h; sourceTree = "<group>"; };
 		58B809030FCDBDB8002EBA8C /* NSArray_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_UnitTests.m; sourceTree = "<group>"; };
 		58B809070FCDBDD9002EBA8C /* json_test_invalid_01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_invalid_01.txt; sourceTree = "<group>"; };
 		58B809080FCDBDD9002EBA8C /* json_test_valid_01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_valid_01.txt; sourceTree = "<group>"; };
@@ -82,12 +66,13 @@
 		58B8090B0FCDBDD9002EBA8C /* json_test_valid_04.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_valid_04.txt; sourceTree = "<group>"; };
 		58B8090C0FCDBDD9002EBA8C /* json_test_valid_05.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_valid_05.txt; sourceTree = "<group>"; };
 		58B8090D0FCDBDD9002EBA8C /* json_test_valid_06.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_test_valid_06.txt; sourceTree = "<group>"; };
-		58B809150FCDBDE5002EBA8C /* NSString_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString_UnitTests.h; sourceTree = "<group>"; };
 		58B809160FCDBDE5002EBA8C /* NSString_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_UnitTests.m; sourceTree = "<group>"; };
-		58B8093E0FCDC791002EBA8C /* NSDictionary_UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_UnitTests.h; sourceTree = "<group>"; };
 		58B8093F0FCDC791002EBA8C /* NSDictionary_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_UnitTests.m; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* BSJSONAdditions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSJSONAdditions.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B146FD31106D157400C857BF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = /System/Library/Frameworks/SenTestingKit.framework; sourceTree = "<absolute>"; };
+		B146FD61106D16E800C857BF /* UnitTestSetup.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = UnitTestSetup.applescript; sourceTree = "<group>"; };
+		B146FDB1106D1BB400C857BF /* UnitTests_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTests_Prefix.pch; sourceTree = "<group>"; };
+		B146FDB8106D1C0E00C857BF /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../Debug.xcconfig; sourceTree = "<group>"; };
+		B146FDBB106D1C1C00C857BF /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,16 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				289A90630992AF6B0026B656 /* SenTestingKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D11072E0486CEB800E47090 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				289A90620992AF6B0026B656 /* SenTestingKit.framework in Frameworks */,
+				B146FDD6106D1F2900C857BF /* Foundation.framework in Frameworks */,
+				B146FD32106D157400C857BF /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +108,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				289A90610992AF6B0026B656 /* SenTestingKit.framework */,
-				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -140,9 +116,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
-				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
-				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				B146FD31106D157400C857BF /* SenTestingKit.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -150,28 +124,23 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* BSJSONAdditions.app */,
-				28278CEA0991DC5000BCE5A7 /* Unit Tests.octest */,
+				28278CEA0991DC5000BCE5A7 /* UnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		289A902F0992AA150026B656 /* Unit Tests */ = {
+		289A902F0992AA150026B656 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				58B808FE0FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.h */,
-				58B808FF0FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.m */,
-				58B809000FCDBDB8002EBA8C /* JSONValidTests.h */,
-				58B809010FCDBDB8002EBA8C /* JSONValidTests.m */,
-				58B809020FCDBDB8002EBA8C /* NSArray_UnitTests.h */,
-				58B809030FCDBDB8002EBA8C /* NSArray_UnitTests.m */,
-				58B809150FCDBDE5002EBA8C /* NSString_UnitTests.h */,
-				58B809160FCDBDE5002EBA8C /* NSString_UnitTests.m */,
-				58B8093E0FCDC791002EBA8C /* NSDictionary_UnitTests.h */,
-				58B8093F0FCDC791002EBA8C /* NSDictionary_UnitTests.m */,
+				B146FFA6106D253E00C857BF /* Build Support */,
 				289A90300992AA1F0026B656 /* Test Files */,
+				58B808FF0FCDBDB8002EBA8C /* NSScannerAdditionTests.m */,
+				58B809010FCDBDB8002EBA8C /* JSONValidTests.m */,
+				58B809030FCDBDB8002EBA8C /* NSArray_UnitTests.m */,
+				58B809160FCDBDE5002EBA8C /* NSString_UnitTests.m */,
+				58B8093F0FCDC791002EBA8C /* NSDictionary_UnitTests.m */,
 			);
-			path = "Unit Tests";
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 		289A90300992AA1F0026B656 /* Test Files */ = {
@@ -191,34 +160,12 @@
 		29B97314FDCFA39411CA2CEA /* BSJSONAdditions */ = {
 			isa = PBXGroup;
 			children = (
-				289A902F0992AA150026B656 /* Unit Tests */,
 				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
+				289A902F0992AA150026B656 /* UnitTests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				28278CEB0991DC5000BCE5A7 /* Unit Tests-Info.plist */,
 			);
 			name = BSJSONAdditions;
-			sourceTree = "<group>";
-		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				32CA4F630368D1EE00C91783 /* BSJSONAdditions_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8D1107310486CEB800E47090 /* Info.plist */,
-				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
@@ -230,45 +177,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B146FFA6106D253E00C857BF /* Build Support */ = {
+			isa = PBXGroup;
+			children = (
+				B146FDB1106D1BB400C857BF /* UnitTests_Prefix.pch */,
+				28278CEB0991DC5000BCE5A7 /* UnitTests-Info.plist */,
+				B146FD61106D16E800C857BF /* UnitTestSetup.applescript */,
+				B146FDB8106D1C0E00C857BF /* Debug.xcconfig */,
+				B146FDBB106D1C1C00C857BF /* Release.xcconfig */,
+			);
+			name = "Build Support";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		28278CE90991DC5000BCE5A7 /* Unit Tests */ = {
+		28278CE90991DC5000BCE5A7 /* UnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28278CED0991DC5100BCE5A7 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
+			buildConfigurationList = 28278CED0991DC5100BCE5A7 /* Build configuration list for PBXNativeTarget "UnitTests" */;
 			buildPhases = (
-				28278CE50991DC5000BCE5A7 /* Resources */,
 				28278CE60991DC5000BCE5A7 /* Sources */,
 				28278CE70991DC5000BCE5A7 /* Frameworks */,
-				28278CE80991DC5000BCE5A7 /* ShellScript */,
+				28278CE50991DC5000BCE5A7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				28278CF10991DC5800BCE5A7 /* PBXTargetDependency */,
 			);
-			name = "Unit Tests";
+			name = UnitTests;
 			productName = "Unit Tests";
-			productReference = 28278CEA0991DC5000BCE5A7 /* Unit Tests.octest */;
+			productReference = 28278CEA0991DC5000BCE5A7 /* UnitTests.octest */;
 			productType = "com.apple.product-type.bundle";
-		};
-		8D1107260486CEB800E47090 /* BSJSONAdditions */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "BSJSONAdditions" */;
-			buildPhases = (
-				8D1107290486CEB800E47090 /* Resources */,
-				8D11072C0486CEB800E47090 /* Sources */,
-				8D11072E0486CEB800E47090 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BSJSONAdditions;
-			productInstallPath = "$(HOME)/Applications";
-			productName = BSJSONAdditions;
-			productReference = 8D1107320486CEB800E47090 /* BSJSONAdditions.app */;
-			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -282,8 +221,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* BSJSONAdditions */,
-				28278CE90991DC5000BCE5A7 /* Unit Tests */,
+				B146FF2F106D1FA600C857BF /* Configure Project for Unit Testing */,
+				28278CE90991DC5000BCE5A7 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -303,19 +242,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D1107290486CEB800E47090 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
-				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		28278CE80991DC5000BCE5A7 /* ShellScript */ = {
+		B146FF2E106D1FA600C857BF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,7 +256,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = "osascript ${PROJECT_DIR}/UnitTests/UnitTestSetup.applescript\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -340,7 +270,7 @@
 				2889EE950F7956BB00B514B9 /* NSArray+BSJSONAdditions.m in Sources */,
 				2889EE9D0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */,
 				581BAB610FCC62C100FC9A5F /* BSJSONEncoder.m in Sources */,
-				58B809040FCDBDB8002EBA8C /* BSJSONScanner_UnitTests.m in Sources */,
+				58B809040FCDBDB8002EBA8C /* NSScannerAdditionTests.m in Sources */,
 				58B809050FCDBDB8002EBA8C /* JSONValidTests.m in Sources */,
 				58B809060FCDBDB8002EBA8C /* NSArray_UnitTests.m in Sources */,
 				58B809170FCDBDE5002EBA8C /* NSString_UnitTests.m in Sources */,
@@ -348,156 +278,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D11072C0486CEB800E47090 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				28278CF60991DC8F00BCE5A7 /* NSDictionary+BSJSONAdditions.m in Sources */,
-				28278CF90991DC9F00BCE5A7 /* NSScanner+BSJSONAdditions.m in Sources */,
-				2889EE960F7956BB00B514B9 /* NSArray+BSJSONAdditions.m in Sources */,
-				2889EE9C0F7997E500B514B9 /* NSString+BSJSONAdditions.m in Sources */,
-				581BAB6F0FCC693200FC9A5F /* BSJSONEncoder.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		28278CF10991DC5800BCE5A7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8D1107260486CEB800E47090 /* BSJSONAdditions */;
-			targetProxy = 28278CF00991DC5800BCE5A7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C165DFE840E0CC02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				29B97319FDCFA39411CA2CEA /* English */,
-			);
-			name = MainMenu.nib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		28278CEE0991DC5100BCE5A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B146FDB8106D1C0E00C857BF /* Debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BSJSONAdditions.app/Contents/MacOS/BSJSONAdditions";
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS)",
-					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
-					"$(SYSTEM_DEVELOPER_DIR)/SDKs/MacOSX10.5.sdk/System/Library/Frameworks",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "Unit Tests-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Cocoa,
-					"-framework",
-					SenTestingKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = "Unit Tests";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
 		28278CEF0991DC5100BCE5A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B146FDBB106D1C1C00C857BF /* Release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BSJSONAdditions.app/Contents/MacOS/BSJSONAdditions";
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS)",
-					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
-					"$(SYSTEM_DEVELOPER_DIR)/SDKs/MacOSX10.5.sdk/System/Library/Frameworks",
-				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "Unit Tests-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Cocoa,
-					"-framework",
-					SenTestingKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = "Unit Tests";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
-		C01FCF4B08A954540054247B /* Debug */ = {
+		B146FF30106D1FA600C857BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS)",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = BSJSONAdditions;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
+				PRODUCT_NAME = Untitled;
 			};
 			name = Debug;
 		};
-		C01FCF4C08A954540054247B /* Release */ = {
+		B146FF31106D1FA600C857BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS)",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = BSJSONAdditions;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				WRAPPER_EXTENSION = app;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Untitled;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -505,33 +319,19 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		28278CED0991DC5100BCE5A7 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
+		28278CED0991DC5100BCE5A7 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28278CEE0991DC5100BCE5A7 /* Debug */,
@@ -540,11 +340,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "BSJSONAdditions" */ = {
+		B146FF4A106D200D00C857BF /* Build configuration list for PBXAggregateTarget "Configure Project for Unit Testing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C01FCF4B08A954540054247B /* Debug */,
-				C01FCF4C08A954540054247B /* Release */,
+				B146FF30106D1FA600C857BF /* Debug */,
+				B146FF31106D1FA600C857BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
