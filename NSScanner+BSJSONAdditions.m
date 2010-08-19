@@ -1,4 +1,4 @@
-//'' testing by plurkey
+//
 //  BSJSONAdditions
 //
 //  Created by Blake Seely on 2/1/06.
@@ -63,14 +63,28 @@ const NSInteger jsonDoNotIndent = -1;
 		NSString *key = nil;
 		id value;
 		[self scanJSONWhiteSpace];
+		
+		NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];	
+		int counter = 0;
 		while (([self scanJSONString:&key]) && ([self scanJSONKeyValueSeparator]) && ([self scanJSONValue:&value])) {
+			
+			
+			NSLog(@"auto releas pool!!");
 			[jsonKeyValues setObject:value forKey:key];
 			[self scanJSONWhiteSpace];
+			
+			if (counter%500==0) {
+				[pool drain];
+				pool = [[NSAutoreleasePool alloc] init];	
+			}
+			counter++;
+			
 			// check to see if the character at scan location is a value separator. If it is, do nothing.
 			if ([[[self string] substringWithRange:NSMakeRange([self scanLocation], 1)] isEqualToString:jsonValueSeparatorString]) {
 				[self scanJSONValueSeparator];
 			}
 		}
+		[pool drain];
 		if ([self scanJSONObjectEndString]) {
 			// whether or not we found a key-val pair, we found open and close brackets - completing an object
 			result = YES;
