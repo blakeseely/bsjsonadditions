@@ -64,15 +64,15 @@ const NSInteger jsonDoNotIndent = -1;
 		id value;
 		[self scanJSONWhiteSpace];
 		
+		// add an autorelease pool to fix memory issues
 		NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];	
+		
 		int counter = 0;
 		while (([self scanJSONString:&key]) && ([self scanJSONKeyValueSeparator]) && ([self scanJSONValue:&value])) {
-			
-			
-			NSLog(@"auto releas pool!!");
 			[jsonKeyValues setObject:value forKey:key];
 			[self scanJSONWhiteSpace];
 			
+			//release the pool once every 500 iterations (500 is just a wild guess, should do more tests to find out the best value)
 			if (counter%500==0) {
 				[pool drain];
 				pool = [[NSAutoreleasePool alloc] init];	
@@ -83,8 +83,11 @@ const NSInteger jsonDoNotIndent = -1;
 			if ([[[self string] substringWithRange:NSMakeRange([self scanLocation], 1)] isEqualToString:jsonValueSeparatorString]) {
 				[self scanJSONValueSeparator];
 			}
+			
 		}
+		//always release the pool at the end of the loop
 		[pool drain];
+		
 		if ([self scanJSONObjectEndString]) {
 			// whether or not we found a key-val pair, we found open and close brackets - completing an object
 			result = YES;
